@@ -44,6 +44,8 @@
 		A17D0DA61A787E0700159C58 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = A17D0DA31A787E0700159C58 /* UIViewExt.m */; };
 		A17D0DA91A78813400159C58 /* MBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A17D0DA81A78813400159C58 /* MBaseTableView.m */; };
 		A17D0DAC1A78828800159C58 /* MBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17D0DAB1A78828800159C58 /* MBaseNavigationController.m */; };
+		A17D0DB11A789B2600159C58 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A17D0DAF1A789B2600159C58 /* ShoppingViewController.m */; };
+		A17D0DB21A789B2600159C58 /* ShoppingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A17D0DB01A789B2600159C58 /* ShoppingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,9 @@
 		A17D0DAA1A78828800159C58 /* MBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBaseNavigationController.h; sourceTree = "<group>"; };
 		A17D0DAB1A78828800159C58 /* MBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBaseNavigationController.m; sourceTree = "<group>"; };
 		A17D0DAD1A78831B00159C58 /* XUK-PCK.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XUK-PCK.pch"; sourceTree = "<group>"; };
+		A17D0DAE1A789B2600159C58 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
+		A17D0DAF1A789B2600159C58 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		A17D0DB01A789B2600159C58 /* ShoppingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +263,9 @@
 		A17D0D471A78772400159C58 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A17D0DAE1A789B2600159C58 /* ShoppingViewController.h */,
+				A17D0DAF1A789B2600159C58 /* ShoppingViewController.m */,
+				A17D0DB01A789B2600159C58 /* ShoppingViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				A17D0D871A787D2000159C58 /* blackArrow.png in Resources */,
 				A17D0D151A786ED300159C58 /* LaunchScreen.xib in Resources */,
 				A17D0D8D1A787D2000159C58 /* grayArrow@2x.png in Resources */,
+				A17D0DB21A789B2600159C58 /* ShoppingViewController.xib in Resources */,
 				A17D0D8A1A787D2000159C58 /* blueArrow@2x.png in Resources */,
 				A17D0D891A787D2000159C58 /* blueArrow.png in Resources */,
 				A17D0D881A787D2000159C58 /* blackArrow@2x.png in Resources */,
@@ -487,6 +496,7 @@
 				A17D0D941A787D2000159C58 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				A17D0D961A787D2000159C58 /* MKNetworkOperation.m in Sources */,
 				A17D0D981A787D2000159C58 /* SDImageCache.m in Sources */,
+				A17D0DB11A789B2600159C58 /* ShoppingViewController.m in Sources */,
 				A17D0D9A1A787D2000159C58 /* SDWebImageManager.m in Sources */,
 				A17D0D8F1A787D2000159C58 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				A17D0DA41A787E0700159C58 /* UIUtils.m in Sources */,
@@ -692,6 +702,7 @@
 				A17D0D261A786ED300159C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A17D0D271A786ED300159C58 /* Build configuration list for PBXNativeTarget "XUKTests" */ = {
 			isa = XCConfigurationList;
@@ -700,6 +711,7 @@
 				A17D0D291A786ED300159C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
