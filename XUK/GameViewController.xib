@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController">
             <connections>
-                <outlet property="headImg" destination="Nxl-ta-W8m" id="BtI-aV-XiX"/>
-                <outlet property="tableView" destination="suw-B2-ni7" id="eLZ-7y-xRk"/>
+                <outlet property="headImg" destination="HRS-CC-ggd" id="TeP-wx-1O2"/>
+                <outlet property="tableView" destination="uK9-Yo-aN2" id="Yev-vA-hyX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,30 +16,26 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="273" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="suw-B2-ni7" customClass="ShoppingTable">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="273" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uK9-Yo-aN2" customClass="ShoppingTable">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="320" id="Kmw-Zj-wPc"/>
-                        <constraint firstAttribute="height" constant="480" id="ixR-H8-0dx"/>
+                        <constraint firstAttribute="width" constant="320" id="bqJ-lm-FvG"/>
+                        <constraint firstAttribute="height" constant="480" id="cfl-L7-1hj"/>
                     </constraints>
-                    <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testsd.png" id="Nxl-ta-W8m">
+                    <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testsd.png" id="HRS-CC-ggd">
                         <rect key="frame" x="0.0" y="10" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="PMd-YE-4Ap"/>
-                        <outlet property="delegate" destination="-1" id="xzq-Cv-VgV"/>
-                    </connections>
                 </tableView>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="suw-B2-ni7" secondAttribute="trailing" id="cb0-Zs-9eF"/>
-                <constraint firstItem="suw-B2-ni7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gMs-cv-tlj"/>
-                <constraint firstAttribute="bottom" secondItem="suw-B2-ni7" secondAttribute="bottom" id="zi5-dx-arw"/>
+                <constraint firstAttribute="bottom" secondItem="uK9-Yo-aN2" secondAttribute="bottom" id="6Hz-dw-WFe"/>
+                <constraint firstItem="uK9-Yo-aN2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9zR-GV-8U4"/>
+                <constraint firstItem="uK9-Yo-aN2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S2B-PZ-9Gx"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="209" y="151"/>
         </view>
     </objects>
     <resources>

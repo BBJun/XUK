@@ -7,8 +7,11 @@
 //
 
 #import "ShoppingViewController.h"
+#import "ShoppingTable.h"
 
 @interface ShoppingViewController ()
+@property (weak, nonatomic) IBOutlet ShoppingTable *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 
 @end
 

@@ -8,6 +8,20 @@
 
 #import "AppDelegate.h"
 #import "SCNavTabBarController.h"
+#import "MMDrawerController.h"
+#import "DietViewController.h"
+#import "ShoppingViewController.h"
+#import "UserCenterViewController.h"
+#import "MMDrawerVisualState.h"
+#import "MMDrawerVisualStateManager.h"
+#import "MBaseNavigationController.h"
+#import "TravelViewController.h"
+#import "UsedViewController.h"
+#import "ClubViewController.h"
+#import "RentViewController.h"
+#import "SportViewController.h"
+#import "GameViewController.h"
+#import "OtherViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +35,46 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    DietViewController *dietVc = [[DietViewController alloc] initWithNibName:@"DietViewController" bundle:nil];
+    dietVc.title = @"饮食";
+    ShoppingViewController *shoppingVc = [[ShoppingViewController alloc] initWithNibName:@"ShoppingViewController" bundle:nil];
+    shoppingVc.title = @"购物";
+    TravelViewController *travelVc = [[TravelViewController alloc] initWithNibName:@"TravelViewController" bundle:nil];
+    travelVc.title = @"旅游";
+    UsedViewController *usedVc = [[UsedViewController alloc] initWithNibName:@"UsedViewController" bundle:nil];
+    usedVc.title = @"二手";
+    ClubViewController *clubVc = [[ClubViewController alloc] initWithNibName:@"ClubViewController" bundle:nil];
+    clubVc.title = @"俱乐部";
+    RentViewController *rentVc = [[RentViewController alloc] initWithNibName:@"RentViewController" bundle:nil];
+    rentVc.title = @"租房";
+    SportViewController *sportVc = [[SportViewController alloc] initWithNibName:@"SportViewController" bundle:nil];
+    sportVc.title = @"运动";
+    GameViewController *gameVc = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    gameVc.title = @"游戏";
+    OtherViewController *otherVc = [[OtherViewController alloc] initWithNibName:@"OtherViewController" bundle:nil];
+    otherVc.title = @"其他";
+    UserCenterViewController *userVc = [[UserCenterViewController alloc] initWithNibName:@"UserCenterViewController" bundle:nil];
+    SCNavTabBarController *scNav = [[SCNavTabBarController alloc] initWithSubViewControllers:@[dietVc, shoppingVc, travelVc, usedVc,
+                                                            clubVc, rentVc, sportVc, gameVc, otherVc]];
+    MBaseViewController *centerVc = [[MBaseViewController alloc] init];
+    [scNav addParentController:centerVc];
+    MBaseNavigationController *baseNav = [[MBaseNavigationController alloc] initWithRootViewController:centerVc];
+    MMDrawerController *drawerVc = [[MMDrawerController alloc] initWithCenterViewController:baseNav leftDrawerViewController:userVc];
+    [drawerVc setMaximumLeftDrawerWidth:280];
+    [drawerVc setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerVc setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    [drawerVc
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [[MMDrawerVisualStateManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    self.window.rootViewController = drawerVc;
     return YES;
 }
 

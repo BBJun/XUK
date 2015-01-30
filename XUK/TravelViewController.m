@@ -1,24 +1,26 @@
 //
-//  MBaseNavigationController.m
+//  TravelViewController.m
 //  XUK
 //
-//  Created by 123 on 15-1-28.
+//  Created by 123 on 15-1-30.
 //  Copyright (c) 2015年 andy. All rights reserved.
 //
 
-#import "MBaseNavigationController.h"
+#import "TravelViewController.h"
+#import "ShoppingTable.h"
 
-@interface MBaseNavigationController ()
+@interface TravelViewController ()
+
+@property (weak, nonatomic) IBOutlet ShoppingTable *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *headImg;
 
 @end
 
-@implementation MBaseNavigationController
+@implementation TravelViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationBar.barTintColor = [UIColor colorWithRed:255.0/255 green:91.0/255 blue:1.0/255 alpha:1];
-    
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

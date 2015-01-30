@@ -10,8 +10,8 @@
 #import "CommonMacro.h"
 #import "SCPopView.h"
 
-#define NOMALBACKCOLOR [UIColor redColor]
-#define SELECTBACKCOLOR [UIColor yellowColor]
+#define NOMALBACKCOLOR [UIColor colorWithRed:255.0/255 green:142.0/255 blue:45.0/255 alpha:1]
+#define SELECTBACKCOLOR [UIColor colorWithRed:255.0/255 green:197.0/255 blue:45.0/255 alpha:1]
 #define NOMALTITLECOLOR [UIColor whiteColor]
 #define SELECTTITLECOLOR [UIColor blackColor]
 
